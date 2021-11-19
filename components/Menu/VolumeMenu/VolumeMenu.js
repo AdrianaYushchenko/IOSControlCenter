@@ -17,7 +17,7 @@ const VolumeMenu = () => {
                 justifyContent: "center",
                 width: 200,
                 height: 75,
-                top: 300,
+                top: 270,
                 left: 45,
                 transform: [{rotate: '-90deg'}],
                 borderRadius: 22

@@ -7,7 +7,7 @@ const flex = `flex: 1;
   `
 
 export const AppContainer = styled.View`
-
+  margin-top: 30px;
 `;
 
 export const Container = styled.TouchableOpacity`
@@ -24,11 +24,10 @@ export const ChildContainer = styled.View`
   align-content: center;
 `;
 
-export const Button = styled.View`
+export const Button = styled.Pressable`
   border-radius: 50px;
   width: 55px;
   height: 55px;
-  background-color: rgba(255,255,255,0.89);
   margin: 5px 5px;
 `;
 
