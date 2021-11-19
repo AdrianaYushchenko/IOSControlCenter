@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 const flex = `flex: 1;
   flex-direction: column;
-  background-color: rgba(0, 11, 9, 0.53)
+  background-color: rgba(47,47,47,0.78)
   border-radius: 45px
   `
 
@@ -28,7 +28,7 @@ export const Button = styled.View`
   border-radius: 50px;
   width: 55px;
   height: 55px;
-  background-color: #eafffb;
+  background-color: rgba(255,255,255,0.89);
   margin: 5px 5px;
 `;
 
@@ -42,7 +42,6 @@ export const ParentContainer = styled.View`
   height: 100%;
   flex: 1;
   flex-direction: row;
-  position: relative;
 `;
 
 export const FocusWindowContainer = styled.Pressable`
@@ -55,7 +54,7 @@ export const FocusWindowContainer = styled.Pressable`
 export const FocusWindow = styled.Pressable`
   width: 100%;
   height: 100%;
-  background-color: aliceblue;
+  background-color: #fff;
   padding: 40px 15px;
 `;
 
@@ -73,4 +72,9 @@ export const FocusStatus = styled.Text`
 export const FocusCell = styled.View`
   flex: 1;
   align-items: center;
+`;
+
+export const Slider = styled.View`
+  flex: 1;
+  flex-direction: row;
 `;
