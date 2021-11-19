@@ -1,30 +1,19 @@
-import React from 'react';
-import {Text, View} from "react-native";
+import React, {useContext} from 'react';
+import UIContext from "../../../context/ui-context";
 import telegram from "../../../assets/icons/airplane-mode.png";
 import {Button, ChildContainer, Container, Image} from "../../../styles/styles";
+import Icons from "./Icons/Icons";
 
 const FocusMenu = () => {
+    const ui = useContext(UIContext);
+    const arr = Array(4).fill({});
     return (
-        <Container>
-            <ChildContainer>
-                <Button>
-                    <Image source={telegram}/>
-                </Button>
+        <Container onLongPress={() => {
+            ui.setOpenMenu(true)
+        }}>
+            <Icons/>
 
-                <Button>
-                    <Image source={telegram}/>
-                </Button>
-            </ChildContainer>
-
-            <ChildContainer>
-                <Button>
-                    <Image source={telegram}/>
-                </Button>
-
-                <Button>
-                    <Image source={telegram}/>
-                </Button>
-            </ChildContainer>
+            <Icons />
         </Container>
     )
         ;
