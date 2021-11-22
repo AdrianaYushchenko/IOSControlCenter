@@ -42,8 +42,8 @@ const Main = () => {
             <SecondSectionContainer>
                 <View>
                     <Block>
-                        <Button image={lock}/>
-                        <Button image={copy}/>
+                        <Button type={"block"} image={lock}/>
+                        <Button type={"block"} image={copy}/>
                     </Block>
                     <FocusMenuButton/>
                 </View>

@@ -4,21 +4,29 @@ import {
     FocusWindow,
 } from "../../styles/styles";
 import FocusButton from "./FocusButton/FocusButton";
+import {Modal} from "react-native";
 
 const FocusButtonModal = () => {
     const ui = useContext(UIContext);
     return (
-        <FocusWindow onPress={() => {
-            ui.setOpenMenu({type: 'four-menu', bool: false})
-        }}>
-            <FocusButton text={'Do Not Disturb'} more={true}/>
+        <Modal
+            animationType="slide"
+            style={{height: "100%"}}
+        >
+            <FocusWindow onPress={() => {
+                ui.setOpenMenu({type: 'four-menu', bool: false})
+            }}>
 
-            <FocusButton text={'Sleep'} more={true}/>
+                <FocusButton text={'Do Not Disturb'} more={true}/>
 
-            <FocusButton text={'Personal'}/>
+                <FocusButton text={'Sleep'} more={true}/>
 
-            <FocusButton text={'Work'}/>
-        </FocusWindow>
+                <FocusButton text={'Personal'}/>
+
+                <FocusButton text={'Work'}/>
+            </FocusWindow>
+
+        </Modal>
     )
         ;
 };

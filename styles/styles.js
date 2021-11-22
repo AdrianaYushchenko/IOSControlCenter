@@ -58,12 +58,12 @@ export const FocusWindowContainer = styled.Pressable`
   ${flexColumn};
   height: auto;
   padding: 60px 20px;
-  margin: 100px 15px;
+  margin: 50px 15px;
 `;
 
 export const FocusWindow = styled.Pressable`
   width: 100%;
-  height: 100%;
+  height: 100%;  
   background: #090707;
   padding: 40px 15px;
 `;
@@ -82,6 +82,7 @@ export const FocusStatus = styled.Text`
 export const FocusCell = styled.View`
   flex: 1;
   align-items: center;
+  margin: 10px 0;
 `;
 
 export const Slider = styled.View`
@@ -95,7 +96,7 @@ export const SecondSectionContainer = styled.View`
 
 export const ButtonContainer = styled.Pressable`
   padding: 37px 26px;
-  margin: auto 10px;
+  margin: auto;
   width: auto;
   border-radius: 25px;
 `;

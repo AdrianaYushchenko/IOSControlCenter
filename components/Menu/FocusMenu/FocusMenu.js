@@ -17,11 +17,12 @@ const FocusMenu = ({type}) => {
                 ui.setOpenMenu({type: 'four-icons', bool: true})
             }}>
                 {type === 'music' ? <MusicPlayer>
-                    <PlayerText>Not Playing</PlayerText>
-                    <MusicPlayerContainer>
-                        <Image source={back} />
-                        <Image source={play} />
-                        <Image style={{transform: [{rotate: '180deg'}]}} source={back} /></MusicPlayerContainer>
+                        <PlayerText>Not Playing</PlayerText>
+                        <MusicPlayerContainer>
+                            <Image style={{transform: [{rotate: '180deg'}]}} source={back}/>
+                            <Image source={play}/>
+                            <Image source={back}/>
+                        </MusicPlayerContainer>
                     </MusicPlayer>
                     : <><Icons icons={[airplane, signal]}/>
 

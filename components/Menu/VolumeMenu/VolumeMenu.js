@@ -12,7 +12,7 @@ const VolumeMenu = ({style, setIconSlider}) => {
         width: 186,
         height: 75,
         top: 265,
-        left: -103,
+        left: -110,
     };
     return (
         <Slider
