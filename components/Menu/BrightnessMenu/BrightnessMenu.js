@@ -1,12 +1,19 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Slider from 'react-native-swipe-slider';
 import {Pressable, View} from "react-native";
 import {Ionicons} from '@expo/vector-icons';
-import {TouchableOpacity} from "react-native-web";
+import UIContext from "../../../context/ui-context";
 
-const BrightnessMenu = () => {
+const BrightnessMenu = ({style}) => {
     const [value, setValue] = useState(50);
-    const [iconSliderValue, setIconSliderValue] = useState(50);
+    const ui = useContext(UIContext);
+    const defaultStyle = style ? style : {
+        width: 186,
+        height: 75,
+        top: 266,
+        left: -15
+    };
+
     return (
         <Slider
             min={0}
@@ -16,23 +23,24 @@ const BrightnessMenu = () => {
             changeEventThrottle={100}
             style={{
                 justifyContent: "center",
-                width: 200,
-                height: 75,
-                top: 270,
-                left: 150,
                 transform: [{rotate: '-90deg'}],
-                borderRadius: 22
+                borderRadius: 22,
+                ...defaultStyle
             }}
-            backgroundColor={'rgba(47,47,47,0.78)'}
+            backgroundColor={'rgb(170, 151, 142)'}
             barColor={'rgba(255,255,255,0.89)'}
             vertical
         >
-            <Ionicons
-                style={{marginHorizontal: 16}}
-                name="sunny"
-                size={32}
-                color={'black'}
-            />
+            <Pressable onLongPress={() => {
+                ui.setOpenMenu({type: 'brightness', bool: true})
+            }}>
+                {!style && <Ionicons
+                    style={{marginHorizontal: 16}}
+                    name="sunny"
+                    size={32}
+                    color={'black'}
+                />}
+            </Pressable>
         </Slider>
     );
 };

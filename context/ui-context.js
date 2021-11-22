@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
-const UIContext = React.createContext({
-    openMenu: false,
-    setOpenMenu: (bool) => {}
-});
+const UIContext = React.createContext({});
 
 export const UIContextProvider = (props) => {
-    const [openMenu, setOpenMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState({bool: false, type: ""});
+    const [isFocusOpen, setIsFocusOpen] = useState({bool: false, text: ""});
 
     return (
         <UIContext.Provider
             value={{
                 openMenu,
-                setOpenMenu
+                setOpenMenu,
+                isFocusOpen,
+                setIsFocusOpen
             }}
         >
             {props.children}
